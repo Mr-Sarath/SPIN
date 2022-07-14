@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_wheel"
+        android:layout_width="@dimen/_300sdp"
+        android:layout_height="@dimen/_300sdp"
+        android:src="@drawable/circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_imageCircle"
+        android:layout_width="@dimen/_245sdp"
+        android:layout_height="@dimen/_300sdp"
+        android:src="@drawable/wheel"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_wheel"
+        app:layout_constraintEnd_toEndOf="@+id/iv_wheel"
+        app:layout_constraintStart_toStartOf="@+id/iv_wheel"
+        app:layout_constraintTop_toTopOf="@+id/iv_wheel" />
+
+    <ImageView
+        android:id="@+id/iv_spin"
+        android:layout_width="@dimen/_65sdp"
+        android:layout_height="@dimen/_65sdp"
+        android:src="@drawable/spin_button"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_imageCircle"
+        app:layout_constraintEnd_toEndOf="@+id/iv_imageCircle"
+        app:layout_constraintStart_toStartOf="@+id/iv_imageCircle"
+        app:layout_constraintTop_toTopOf="@+id/iv_imageCircle" />
+
+    <ImageView
+        android:id="@+id/imagePointer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_minus45sdp"
+        android:src="@drawable/pointer"
+        app:layout_constraintBottom_toTopOf="@+id/iv_wheel"
+        app:layout_constraintEnd_toEndOf="@+id/iv_imageCircle"
+        app:layout_constraintStart_toStartOf="@+id/iv_imageCircle" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:outlineSpotShadowColor="#F60000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_wheel">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_spin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/carter_one"
+                android:gravity="center"
+                android:text="SPIN"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
